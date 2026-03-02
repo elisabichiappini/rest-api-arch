@@ -1,5 +1,5 @@
 const store = (req, res) => {
-    res.send("Creazione pizza");
+    res.status(200).send("Creazione pizza");
 }
 
 module.exports = {
