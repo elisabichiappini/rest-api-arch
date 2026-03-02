@@ -14,3 +14,12 @@ datasource db {
   // See prisma.config.ts and pass `adapter` or `accelerateUrl` to the
   // PrismaClient constructor at runtime instead of using `url` here.
 }
+
+model Pizza {
+  id        Int      @id @default(autoincrement())
+  name      String
+  price     Float
+  available Boolean  @default(true)
+  createAt  DateTime @default(now())
+  updateAt  DateTime @updatedAt
+}
