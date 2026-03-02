@@ -1,5 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const prisma = require("../prisma/client");
+const pizzaController = require("../controllers/pizzas");
 
-router.post("/", storePizza);
+router.post("/", pizzaController.store);
