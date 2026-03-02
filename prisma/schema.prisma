@@ -6,9 +6,11 @@
 
 generator client {
   provider = "prisma-client"
-  // explicitly set where the generated client should be written;
-  // relative to the schema directory. Prisma 7 requires an output path.
-  output   = "node_modules/.prisma/client"
+  // Prisma 7 requires an output path; default is inside the @prisma/client
+  // package so that `require('@prisma/client')` works correctly.
+  // The path is relative to the schema directory. By moving up one level
+  // and into node_modules/@prisma/client we replicate the default layout.
+  output   = "../node_modules/@prisma/client"
 }
 
 datasource db {
