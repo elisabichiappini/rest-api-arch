@@ -5,12 +5,12 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client"
+  provider = "prisma-client-js"
   // Prisma 7 requires an output path; default is inside the @prisma/client
   // package so that `require('@prisma/client')` works correctly.
   // The path is relative to the schema directory. By moving up one level
   // and into node_modules/@prisma/client we replicate the default layout.
-  output   = "../node_modules/@prisma/client"
+  // output   = "../node_modules/@prisma/client"
 }
 
 datasource db {
