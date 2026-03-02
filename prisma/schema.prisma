@@ -6,6 +6,9 @@
 
 generator client {
   provider = "prisma-client"
+  // explicitly set where the generated client should be written;
+  // relative to the schema directory. Prisma 7 requires an output path.
+  output   = "node_modules/.prisma/client"
 }
 
 datasource db {
